@@ -13,7 +13,7 @@ namespace MartenTest.Services
             _session = session;
         }
 
-        public Task<P1> GetNameOfStudents(string id)
+        public P1 GetNameOfStudents(string id)
         {
             var result = _session.Events.AggregateStream<P1>(new Guid(id));
             return result;
